@@ -34,6 +34,7 @@ def login():
     
     
 @app.route('/bills', methods=['GET'])
+@cross_origin(support_credentials=True)
 def get_bills():
     if 'userid' not in session:
         return jsonify({'message': 'User not logged in'}), 401
@@ -41,15 +42,20 @@ def get_bills():
     userid = session['userid']
     query = "SELECT * FROM bill WHERE userid = %s"
     cursor.execute(query, (userid,))
-    bills = cursor.fetchone()
+    bills = cursor.fetchall()
 
     # Convert bills to a list of dictionaries
     bill_list = []
     for bill in bills:
         bill_dict = {
-            'id': bill[0],
-            'name': bill[1],
-            'amount': bill[2],
+            'admno': bill[0],
+            'lhid': bill[1],
+            'name': bill[2],
+            'fee':bill[3],
+            'due':bill[4],
+            'fine':bill[5],
+            'month':bill[6],
+            'status':bill[7]
             # Add other fields as needed
         }
         bill_list.append(bill_dict)

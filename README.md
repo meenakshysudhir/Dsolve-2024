@@ -8,11 +8,13 @@ CodeYugam
 
 # Team Member
 
-Member 1 Github Link
+https://github.com/meenakshysudhir
 
-MEmber 2 Github Link
+https://github.com/j1i2y3a4
 
 ## Idea
+
+We aim to build a project that eases hostel imates to pay their fee using a platform that has payment gateway intergrated in it.This website updates the dues after payment which removes tedious paperwork and possible miscalculations and errors.
 
 Breif Idea in two three sentences
 
@@ -22,7 +24,7 @@ Breif Idea in two three sentences
 
 ## Link to product walkthrough
 
-[link to video](Link Here)
+The user has to login using their userid and password. After succesfull login, profile page is routed which contains the pending dues of the inmate and an option to pay the due using a payment gateway.After successful payment, the amount payed is updated in the the hostel fee database and an online reciept for the inmate is immeadiately generated.
 
 ## Libraries used
 

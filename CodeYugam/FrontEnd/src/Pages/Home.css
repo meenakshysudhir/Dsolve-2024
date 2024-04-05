@@ -28,24 +28,23 @@ body{
     height:80vh;
     width:400px;
     padding:20px;   
-    /*   */
-    /* align-items:flex-start; */
-    background-color:white  ;
+    /* background-color:white  ; */
     justify-content: center;
     align-items:center;
     border-radius: 5%;
-    /* box-shadow: inset   ; */
-    box-shadow: 5px 5px 5px rgb(177, 8, 8);
+    /* box-shadow: 5px 5px 5px rgb(177, 8, 8); */
+    background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
 }
 .Heading 
 {
     height:5vh;
     font-size: 40px;
     padding:20px;
+    /* Rectangle 3 */
+    
+    background-color: linear-gradient(180deg, rgba(0, 32, 146, 0.56) 33.4%, rgba(225, 5, 5, 0.56) 100%);
+
 }
-/* .Headinf:hover{
-    background-color: ;
-} */
 .login{
     display:flex;
     height:60vh;
@@ -78,6 +77,8 @@ input{
 
 }
 .loginBtn:hover{
-    background-color: black;
-    color:white;
+    /* background-color: black;
+    color: linear-gradient(180deg, rgba(0, 32, 146, 0.56) 33.4%, rgba(225, 5, 5, 0.56) 100%); */
+    background: black;
+color:white;
 }

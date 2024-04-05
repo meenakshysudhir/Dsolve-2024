@@ -8,6 +8,9 @@
 body{
     /* background-color: black; */
     font-family: 'EB Garamond','sans-serif';
+    background-image: url('../assets/CET.jpeg');
+    background-size:cover;
+    background-repeat: no-repeat;
 }
 .Home{
     display: flex;
@@ -15,7 +18,8 @@ body{
     align-items: center;
     height:100vh;
     margin:10px;
-    background-color: #F2F2F2;
+    
+    /* background-color: #F2F2F2; */
 }
 .loginCard{
     display: flex;
@@ -29,7 +33,7 @@ body{
     border-radius: 5%;
     /* box-shadow: 5px 5px 5px rgb(177, 8, 8); */
     /* background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12); */
-    background-color: #A6A6A6;
+    background-color: #2d297c8d;
 }
 .Heading 
 {

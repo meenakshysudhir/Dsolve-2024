@@ -16,7 +16,8 @@ const History = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("/api/bill");
+        const response = await fetch("/api/Profile");
+        console.log(response);
         const jsonData = await response.json();
         setHistoryData(jsonData);
       } catch (error) {
@@ -45,19 +46,19 @@ const History = () => {
         <div className="scroll_area">
           {historyData.map((singleRow) => {
             return (
-              <tr key={index}>
-                <td className="rows">{singleRow[0]}</td>
-                <td className="rows">{singleRow[1]}</td>
-                <td className="rows">{singleRow[2]}</td>
-                <td className="rows">{singleRow[3]}</td>
-                <td className="rows">{singleRow[4]}</td>
-                <td className="rows">{singleRow[5]}</td>
-                <td className="rows">{singleRow[6]}</td>
+              <tr>
+                <td className="rows">{singleRow["admno"]}</td>
+                <td className="rows">{singleRow["lhid"]}</td>
+                <td className="rows">{singleRow["name"]}</td>
+                <td className="rows">{singleRow["fee"]}</td>
+                <td className="rows">{singleRow["due"]}</td>
+                <td className="rows">{singleRow["fine"]}</td>
+                <td className="rows">{singleRow["month"]}</td>
                 <td>
-                  {singleRow[7] == "unpaid" ? (
+                  {singleRow[7] != "paid" ? (
                     <button className="payBtn">PAY</button>
                   ) : (
-                    singleRow[7]
+                    singleRow["status"]
                   )}
                 </td>
               </tr>

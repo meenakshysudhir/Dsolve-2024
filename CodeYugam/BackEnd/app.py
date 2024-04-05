@@ -31,6 +31,30 @@ def login():
         return jsonify({'message': 'Login successful'}), 200
     else:
         return jsonify({'message': 'Invalid username or password'}), 401
+    
+    
+@app.route('/bills', methods=['GET'])
+def get_bills():
+    if 'userid' not in session:
+        return jsonify({'message': 'User not logged in'}), 401
+
+    userid = session['userid']
+    query = "SELECT * FROM bill WHERE userid = %s"
+    cursor.execute(query, (userid,))
+    bills = cursor.fetchone()
+
+    # Convert bills to a list of dictionaries
+    bill_list = []
+    for bill in bills:
+        bill_dict = {
+            'id': bill[0],
+            'name': bill[1],
+            'amount': bill[2],
+            # Add other fields as needed
+        }
+        bill_list.append(bill_dict)
+
+    return jsonify(bill_list)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True,port=5000)

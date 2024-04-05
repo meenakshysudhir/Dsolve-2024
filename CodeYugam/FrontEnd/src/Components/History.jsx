@@ -37,7 +37,7 @@ const History = () => {
           <th className="details">Month</th>
           <th className="details">Admn No.</th>
           <th className="details">LH No.</th>
-          <th className="details">Name</th>
+          {/* <th className="details">Name</th> */}
           <th className="details">Fee</th>
           <th className="details">Due</th>
           <th className="details">Fine</th>
@@ -51,7 +51,7 @@ const History = () => {
                 <td className="rows">{singleRow["month"]}</td>
                 <td className="rows">{singleRow["admno"]}</td>
                 <td className="rows">{singleRow["lhid"]}</td>
-                <td className="rows">{singleRow["name"]}</td>
+                {/* <td className="rows">{singleRow["name"]}</td> */}
                 <td className="rows">{singleRow["fee"]}</td>
                 <td className="rows">{singleRow["due"]}</td>
                 <td className="rows">{singleRow["fine"]}</td>

@@ -24,22 +24,24 @@ body{
 .loginCard{
     display: flex;
     flex-direction: column;
-    height:80vh;
+    height:70vh;
     width:400px;
     padding:20px;   
     /* background-color:white  ; */
     justify-content: center;
     align-items:center;
     border-radius: 5%;
-    /* box-shadow: 5px 5px 5px rgb(177, 8, 8); */
-    /* background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12); */
+    
+/*      */
     background-color: #a6c0d676;
+    /* background-color: #CA38F2; */
 }
 .Heading 
-{
+{   
     height:5vh;
     font-size: 40px;
     padding:20px;
+    padding-top: 20px;
     /* Rectangle 3 */
     color:black;
     background-color: linear-gradient(180deg, rgba(0, 32, 146, 0.56) 33.4%, rgba(225, 5, 5, 0.56) 100%);
@@ -60,7 +62,7 @@ body{
     border-radius: 20px;
 } */
 input{
-    border-radius: 7px;
+    border-radius: 26px;
     height: 7vh;  
     padding:2px;    
     font-size: 23px;
@@ -74,6 +76,7 @@ input{
     font-size: 25px; 
     font-family: 'EB Garamond','sans-serif';
     cursor: pointer;
+    border-width: 5px;
 
 }
 .loginBtn:hover{
@@ -81,6 +84,7 @@ input{
     color: linear-gradient(180deg, rgba(0, 32, 146, 0.56) 33.4%, rgba(225, 5, 5, 0.56) 100%); */
     background: black;
 color:white;
+border-color:white;
 }
 .headRow
 {

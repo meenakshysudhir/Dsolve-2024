@@ -4,15 +4,15 @@
 
 
 ## Team Name
-Name  
+CodeYugam
 
 # Team Member
-Member 1 Github Link
+https://github.com/meenakshysudhir
 
-MEmber 2 Github Link
+https://github.com/j1i2y3a4
 
 ## Idea
-Breif Idea in two three sentences 
+We aim to build a project that eases hostel imates to pay their fee using a platform that has payment gateway intergrated in it.This website updates the dues after payment which removes tedious paperwork and possible miscalculations and errors.
 
 ## Features 
 1. 

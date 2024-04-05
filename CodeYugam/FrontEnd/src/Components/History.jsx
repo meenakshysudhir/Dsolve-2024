@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import "../Pages/Profile.css";
+import PayBtn from "../Components/PayBtn";
 const History = () => {
   const [historyData, setHistoryData] = useState([
     // ["April", 220321, "22LH100", "Anu", 2003, 1200, 200, "unpaid"],
@@ -46,17 +47,18 @@ const History = () => {
         <div className="scroll_area">
           {historyData.map((singleRow) => {
             return (
-              <tr key={index}>
+              <tr>
+                <td className="rows">{singleRow["month"]}</td>
                 <td className="rows">{singleRow["admno"]}</td>
                 <td className="rows">{singleRow["lhid"]}</td>
                 <td className="rows">{singleRow["name"]}</td>
                 <td className="rows">{singleRow["fee"]}</td>
                 <td className="rows">{singleRow["due"]}</td>
                 <td className="rows">{singleRow["fine"]}</td>
-                <td className="rows">{singleRow["month"]}</td>
+
                 <td>
                   {singleRow[7] != "paid" ? (
-                    <button className="payBtn">PAY</button>
+                    <PayBtn to="/Payment" />
                   ) : (
                     singleRow["status"]
                   )}

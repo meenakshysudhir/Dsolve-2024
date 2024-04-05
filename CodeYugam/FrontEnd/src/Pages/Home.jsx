@@ -111,7 +111,7 @@ const Home = () => {
         e.preventDefault();
 
         try {
-            const response = await axios.post('http://192.168.186.71:5000/', {
+            const response = await axios.post('/api/', {
                 username,
                 password,
             });

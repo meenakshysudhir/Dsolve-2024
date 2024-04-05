@@ -55,7 +55,7 @@ const History = () => {
                 <td className="rows">{singleRow[6]}</td>
                 <td>
                   {singleRow[7] == "unpaid" ? (
-                    <button>PAY</button>
+                    <button className="payBtn">PAY</button>
                   ) : (
                     singleRow[7]
                   )}

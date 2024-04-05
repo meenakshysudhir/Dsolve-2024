@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Russo+One&family=Silkscreen:wght@400;700&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+    font-size: 18px;
+}
+
+body{
+    
+    color:white;
+    font-family: 'sans-serif';
+    /* color:white; */
+}
+.Heading{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+}
+.AllBills{
+    /* display:flex;
+    justify-content: center; */
+    height:100vh;  
+    padding:30px;
+    background-color: #e3e3e3;
+   
+}
+.singleBill{
+    margin:20px;    
+    /* background-color: blue; */
+    /* overflow-y: scroll; */
+    padding:20px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start; */
+    /* justify-content: space-around; */
+    /* justify-content: start; */
+   
+   width: 100%;
+   
+    padding:20px;   
+    /* justify-content: space-around; */
+   background-color: #dedede;
+    align-items: center;
+   border-radius: 10px;
+   height: 80vh;
+   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+   border: 1px solid rgb(186, 186, 186);
+}
+
+.singleBill tr{
+    position: sticky;
+    width: 100%;
+    /* background-color: green; */
+    display: flex;
+    justify-content: space-around;
+}
+.details{
+    padding:10px;
+    border-color: #ffffff;
+    text-align: center;
+    width: 100%;
+    /* width:10vw;  */
+}
+
+.rows{
+    /* background-color: red; */
+    /* height: 10vh; */
+    /* width: 100%; */
+    width: 100%;
+    text-align: center;
+    margin: 1px;
+    height:6vh;
+}
+
+.headRow{
+    border-bottom: 1px solid rgb(165, 165, 165);
+}
+
+.scroll_area{
+    width: 100%;
+    overflow-y: scroll;
+    /* background-color: green; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}

@@ -15,16 +15,16 @@ cursor=conn.cursor()
 @app.route('/', methods=['POST'])
 @cross_origin(support_credentials=True)
 def login():
-    print
     data = request.json
-    username = data.get('username')
+    userid = data.get('username')
     password = data.get('password')
-    session['username']=username
+    session['userid']=userid
     session['password']=password
+    print(userid)
 
     # Query the database for the user
     query = "SELECT * FROM user WHERE userid = %s"
-    cursor.execute(query, (username,))
+    cursor.execute(query, (userid,))
     user = cursor.fetchone()
 
     if user and user[1] == password:  # Assuming password is hashed in the database
@@ -33,16 +33,18 @@ def login():
         return jsonify({'message': 'Invalid username or password'}), 401
     
     
-@app.route('/bills', methods=['GET'])
+@app.route('/Profile', methods=['GET'])
 @cross_origin(support_credentials=True)
 def get_bills():
     if 'userid' not in session:
         return jsonify({'message': 'User not logged in'}), 401
 
     userid = session['userid']
-    query = "SELECT * FROM bill WHERE userid = %s"
+    query = "SELECT * FROM bill WHERE admno = %s"
     cursor.execute(query, (userid,))
     bills = cursor.fetchall()
+    print(bills)
+    print("hello")
 
     # Convert bills to a list of dictionaries
     bill_list = []
@@ -59,7 +61,7 @@ def get_bills():
             # Add other fields as needed
         }
         bill_list.append(bill_dict)
-
+    print(bill_list)
     return jsonify(bill_list)
 
 if __name__ == '__main__':

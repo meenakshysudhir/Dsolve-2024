@@ -46,7 +46,7 @@ const History = () => {
         <div className="scroll_area">
           {historyData.map((singleRow) => {
             return (
-              <tr>
+              <tr key={index}>
                 <td className="rows">{singleRow["admno"]}</td>
                 <td className="rows">{singleRow["lhid"]}</td>
                 <td className="rows">{singleRow["name"]}</td>

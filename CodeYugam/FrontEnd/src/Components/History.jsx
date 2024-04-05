@@ -3,11 +3,14 @@ import { useState, useEffect } from "react";
 import "../Pages/Profile.css";
 const History = () => {
   const [historyData, setHistoryData] = useState([
-    [1, 1, 1, 1, 1, 1, 1, "unpaid"],
-    [1, 1, 1, 1, 1, 1, 1, "unpaid"],
-    [1, 1, 1, 1, 1, 1, 1, "unpaid"],
-    [1, 1, 1, 1, 1, 1, 1, "unpaid"],
-    [1, 1, 1, 1, 1, 1, 1, "unpaid"],
+    ["April", 220321, "22LH100", "Anu", 2003, 1200, 200, "unpaid"],
+    [" March", 220311, "21LH140", "Anu", 3000, 500, 800, "paid"],
+    ["Feb", 220521, "22LH105", "Anu", 2003, 1200, 200, "paid"],
+    ["Jan", 220891, "22LH103", "Anu", 2042, 2200, 100, "paid"],
+    // [1, 1, 1, 1, 1, 1, 1, "unpaid"],
+    // [1, 1, 1, 1, 1, 1, 1, "unpaid"],
+    // [1, 1, 1, 1, 1, 1, 1, "unpaid"],
+    // [1, 1, 1, 1, 1, 1, 1, "unpaid"],
   ]);
 
   return (

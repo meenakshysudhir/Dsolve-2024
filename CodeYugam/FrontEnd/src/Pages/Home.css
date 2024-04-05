@@ -11,6 +11,7 @@ body{
     background-image: url('../assets/CET.jpeg');
     background-size:cover;
     background-repeat: no-repeat;
+    /* background-color: rgb(45, 112, 170); */
 }
 .Home{
     display: flex;

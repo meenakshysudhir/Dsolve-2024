@@ -58,7 +58,7 @@ const History = () => {
 
                 <td>
                   {singleRow[7] != "paid" ? (
-                    <PayBtn to="/Payment" />
+                    <PayBtn to="/Payment" BillId={singleRow["billid"]} />
                   ) : (
                     singleRow["status"]
                   )}
